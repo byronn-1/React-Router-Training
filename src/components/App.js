@@ -6,7 +6,9 @@ import Categories from "./Categories";
 import About from "./About";
 import Category from "./Category";
 
-//the "*" route means any non declared routes
+//W e define placeholders in a URL's path prop using a ":"
+//So here catId represents the category Id
+
 function App() {
   return (
     <div className="app">
@@ -14,7 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home title="Welcome to Red30 tech" />} />
         <Route path="categories" element={<Categories />}>
-          <Route path="category" element={<Category />} />
+          <Route path=":catId" element={<Category />} />
         </Route>
         <Route path="about" element={<About />} />
         <Route
