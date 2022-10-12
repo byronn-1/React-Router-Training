@@ -1,6 +1,9 @@
 import featImg from "../assets/img-main.jpg";
 
-export default function Home() {
+
+
+// notice the title prop is being passed down from the routing component
+export default function Home(props) {
   return (
     <div className="container">
       <img
@@ -9,7 +12,7 @@ export default function Home() {
         alt="Red30 Tech conference attendees on a laptop"
       />
 
-      <h1>Welcome</h1>
+      <h1>{props.title}</h1>
       <p>
         This is a fictitious company and conference created by{" "}
         <a
