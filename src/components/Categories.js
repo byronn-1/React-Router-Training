@@ -1,7 +1,8 @@
-import { Link, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import { getCategories } from "../api";
 
-
+//so here we use an inline ternary operator on the NavLink to choose between CSS classes
+//see below for inline style method
 export default function Categories() {
   const categories = getCategories();
 
@@ -12,7 +13,11 @@ export default function Categories() {
       <ul className="categories">
         {categories.map((cat) => (
           <li key={cat.id}>
-            <Link to={cat.id}>{cat.name}</Link>
+            <NavLink
+              className={({ isActive }) => 
+                isActive ? "category-active" : null
+              }
+              to={cat.id} >{cat.name}</NavLink>
           </li>
         ))}
       </ul>
@@ -20,3 +25,12 @@ export default function Categories() {
     </div>
   );
 }
+
+/* 
+We could use a style instead of a class like so:
+
+style={({ isActive }) => ({
+  color: isActive ? "red" : "green",
+})}
+
+*/

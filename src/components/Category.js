@@ -2,9 +2,7 @@ import { useParams } from "react-router-dom";
 
 import { getCategory } from "../api";
 
-// Here we import the react-router-dom hook useParams
-// We destructure the variable catId from the useParams hook- this comes from the path property on the Route tag in app.js
-// Then we can pull data from api.js using the category variable
+
 export default function Category() {
 
   const { catId } = useParams();

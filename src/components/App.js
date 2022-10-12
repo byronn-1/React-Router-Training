@@ -6,8 +6,6 @@ import Categories from "./Categories";
 import About from "./About";
 import Category from "./Category";
 
-//W e define placeholders in a URL's path prop using a ":"
-//So here catId represents the category Id
 
 function App() {
   return (
