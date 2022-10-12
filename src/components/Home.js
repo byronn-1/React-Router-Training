@@ -1,8 +1,6 @@
 import featImg from "../assets/img-main.jpg";
 
 
-
-// notice the title prop is being passed down from the routing component
 export default function Home(props) {
   return (
     <div className="container">

@@ -1,7 +1,8 @@
+import { Outlet } from "react-router-dom";
 import { getCategories } from "../api";
 
 
-
+//the Outlet component tells react where to render the nested content
 export default function Categories() {
   const categories = getCategories();
 
@@ -14,6 +15,7 @@ export default function Categories() {
           <li key={cat.id}>{cat.name}</li>
         ))}
       </ul>
+      <Outlet />
     </div>
   );
 }
