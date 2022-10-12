@@ -6,10 +6,7 @@ import Categories from "./Categories";
 import About from "./About";
 import Category from "./Category";
 
-
-// Here we nested the Category component into the Categories component route
-//In Categories.js we can see that the Outlet component shows where to render the Category Component
-
+//the "*" route means any non declared routes
 function App() {
   return (
     <div className="app">
@@ -20,6 +17,7 @@ function App() {
           <Route path="category" element={<Category />} />
         </Route>
         <Route path="about" element={<About />} />
+        <Route path="*" element={<h1 className="not-found">Page Not Found</h1>} />
       </Routes>
       <footer className="container">
         &copy;2022 | <a href="https://red30tech.com/">Red30 Tech</a>
