@@ -6,8 +6,10 @@ import Categories from "./Categories";
 import About from "./About";
 import Category from "./Category";
 import Session from "./Session";
+import Register from "./Register";
+import Confirmation from "./Confirmation";
 
-// here in the nested route for Category the index attribute will use the Outlet to render default text before a category is selected
+
 function App() {
   return (
     <div className="app">
@@ -25,6 +27,8 @@ function App() {
           path="*"
           element={<h1 className="not-found">Page Not Found</h1>}
         />
+        <Route path="register" element={<Register />} />
+        <Route path="confirmed" element={<Confirmation />} />
       </Routes>
       <footer className="container">
         &copy;2022 | <a href="https://red30tech.com/">Red30 Tech</a>

@@ -24,12 +24,3 @@ export default function Categories() {
     </div>
   );
 }
-
-/* 
-We could use a style instead of a class like so:
-
-style={({ isActive }) => ({
-  color: isActive ? "red" : "green",
-})}
-
-*/

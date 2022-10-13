@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import logo from "../assets/red30-tech-logo.png";
 
-//Instead of inline JSX here we call a variable with the ternary operator assigned to it
+
 
 export default function Header() {
   const getClass = ({ isActive }) => (isActive ? "nav-active" : null);
@@ -19,7 +19,9 @@ export default function Header() {
         <nav>
           <NavLink to="home" className={getClass}>Home</NavLink>
           <NavLink to="categories" className={getClass}>Categories</NavLink>
-          <NavLink to="about" className={getClass}>About</NavLink>
+        <NavLink to="about" className={getClass}>About</NavLink>
+        <NavLink to="register" className={getClass}>Register</NavLink>
+        
         </nav>
       
     </header>
