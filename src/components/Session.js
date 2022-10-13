@@ -1,9 +1,13 @@
 import { getSession } from "../api";
+import { useParams } from "react-router-dom";
 
+
+//destructured the catId and sessionId from the URL 
+//Passed these params to the getSession function to retrieve data
 export default function Session() {
-  // Replace the placeholder catId and sessionId variables with a React Router Hook
-  const catId = "3d-printing-and-design";
-  const sessionId = "3d-printing-metal";
+
+  const { catId, sessionId } = useParams();
+
 
   const { name, desc, speaker } = getSession({ catId, sessionId });
 

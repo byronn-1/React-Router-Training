@@ -5,8 +5,10 @@ import Home from "./Home";
 import Categories from "./Categories";
 import About from "./About";
 import Category from "./Category";
+import Session from "./Session";
 
 
+//introduced a nested route (for sessionId) nested in another route!
 function App() {
   return (
     <div className="app">
@@ -14,7 +16,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home title="Welcome to Red30 tech" />} />
         <Route path="categories" element={<Categories />}>
-          <Route path=":catId" element={<Category />} />
+          <Route path=":catId" element={<Category />} >
+            <Route path=":sessionId" element={<Session />} />
+          </Route>
         </Route>
         <Route path="about" element={<About />} />
         <Route
