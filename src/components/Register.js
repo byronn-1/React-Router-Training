@@ -1,18 +1,14 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-
-//Here we imported useNavigate
-//in the handleSubmit we call the useNavigate hook passing in the component to be routed to
-// dont for get to create a route for the component to be routed to in the Router component (in this case app.js)
-//Note: this is navigating in response to a button click
+//added a state object to the navigate hook
 export default function Register() {
   const navigate = useNavigate()
   const emailRef = useRef(null);
 
   function handleSubmit(event) {
     event.preventDefault();
-    navigate("/confirmed");
+    navigate("/confirmed", { state: { email: emailRef.current.value } });
   }
 
   return (
