@@ -3,8 +3,6 @@ import { NavLink, Outlet, useParams } from "react-router-dom";
 import { getCategory } from "../api";
 
 
-//Added clickable links with nav link
-//added an Outlet component to show where to render the Session component
 export default function Category() {
   const { catId } = useParams();
   const category = getCategory(catId);

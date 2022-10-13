@@ -1,8 +1,7 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { getCategories } from "../api";
 
-//so here we use an inline ternary operator on the NavLink to choose between CSS classes
-//see below for inline style method
+
 export default function Categories() {
   const categories = getCategories();
 

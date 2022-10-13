@@ -2,8 +2,6 @@ import { getSession } from "../api";
 import { useParams } from "react-router-dom";
 
 
-//destructured the catId and sessionId from the URL 
-//Passed these params to the getSession function to retrieve data
 export default function Session() {
 
   const { catId, sessionId } = useParams();
